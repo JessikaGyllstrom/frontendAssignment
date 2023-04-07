@@ -14,20 +14,30 @@ body {
     background-color: var(--darkblue);
     font-family: 'Roboto', sans-serif;
     color: var(--teal);
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.03rem;    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container {
     padding: 5rem;
     display: flex;
     justify-content: center;
 }
+
 form {
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    border: 0.1rem solid var(--purple);
-    padding: 0.7rem;
+    padding: 2rem 0rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-image: linear-gradient(  rgb(145, 255, 218), rgb(132, 108, 195), rgb(79, 47, 127)) 1;
+}
+h1 {
+    font-size: small;
 }
 form .text {
     display: flex;
@@ -36,6 +46,7 @@ form .text {
 }
 img {
     width: 40%;
+    margin-bottom: 0.7rem;
 }
 input {
     padding: 0.1rem;
@@ -50,24 +61,44 @@ input:focus {
 button {
     background-color: var(--teal);
     border: none;
-    border-radius: 0.5rem;
-    margin-top: 0.4rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
     width: 50%;
     font-size: 0.4rem;
-    min-height: 1rem;
+    min-height: 1.2rem;
 }
 input:focus{
     outline: none;
 }
 .start {
     position: relative;
-    animation-name: example;
-    animation-duration: 3s;  
+    animation-name: rocketstart;
+    animation-duration: 2s;
     animation-delay: 0.5s;
     animation-fill-mode: both;
-    animation-timing-function: ease-in-out
+    animation-timing-function: ease-out;
 }
-@keyframes example {
-    from {top: 0px;}
-    to {top: -20px;}
+@keyframes rocketstart{
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, -10px, 0);}
+}
+/* Media Queries */
+@media only screen and (min-width: 700px) {
+    form {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    form {
+        width: 30%;
+    }
+    input, h1 {
+        font-size: large;
+    }
+    button {
+        min-height: 2rem;
+    }
+    img {
+        margin-bottom: 1.2rem;
+    }
 }
