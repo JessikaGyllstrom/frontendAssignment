@@ -46,7 +46,7 @@ form .text {
 }
 img {
     width: 40%;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.3rem;
 }
 input {
     padding: 0.1rem;
@@ -80,14 +80,23 @@ input:focus {
 .start {
     position: relative;
     animation-name: rocketstart;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }
+i {
+    font-size: 5em;
+    margin-top: 1rem;
+    color: var(--teal);
+}
+i:hover {
+    color: var(--purple);
+    transition: 0.6s;
+}
 @keyframes rocketstart{
     from { transform: translate3d(0, 0, 0);}
-    to { transform: translate3d(0, -10px, 0);}
+    to { transform: translate3d(0, -30px, 0);}
 }
 /* Media Queries */
 @media only screen and (min-width: 700px) {

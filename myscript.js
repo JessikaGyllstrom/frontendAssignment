@@ -20,6 +20,7 @@ for (var i = 0; i < input.length; i++) {
     current[0].className = current[0].className.replace("active", "notactive");
     rocket.classList.remove("start");
     console.log("no active class");
-  }}
+  }  
+}
 )}
 
